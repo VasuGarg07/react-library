@@ -6,12 +6,14 @@ import ThemeHook from "./demos/ThemeHook";
 import ToggleHook from "./demos/ToggleHook";
 import LocalStorageHook from "./demos/LocalStorageHook";
 import DebounceHook from "./demos/DebounceHook";
+import ClickOutsideHook from "./demos/ClickOutsideHook";
 
 const APPS_LIST = [
     { name: "Star Rating", component: <StarRating /> },
     { name: "Tabs", component: <Tabs /> },
     { name: "Typeahead Search", component: <Typeahead /> },
     { name: "Accordion", component: <Accordion /> },
+    { name: "useClickOutside Hook", component: <ClickOutsideHook /> },
     { name: "useDebounce Hook", component: <DebounceHook /> },
     { name: "useLocalStorage Hook", component: <LocalStorageHook /> },
     { name: "useTheme Hook", component: <ThemeHook /> },
