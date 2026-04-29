@@ -1,12 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 
 const StarRating = ({initial = 0, total = 5}) => {
     const [current, setCurrent] = useState(initial);
-    const [starArr, setStarArr] = useState(Array(total).fill(false));
-
-    useEffect(() => {
-        setStarArr(prev => prev.map((el, i) => i < current));
-    }, [current]);
+    const starArray = Array.from({length: total}, (_, i) => i < current);
 
   return (
     <div style={{
@@ -14,7 +10,7 @@ const StarRating = ({initial = 0, total = 5}) => {
         alignItems:"center",
         gap:8
     }}>
-        {starArr.map((el, index) => (
+        {starArray.map((el, index) => (
             <div key={index} 
                 style={{cursor:"pointer"}}
                 onClick={() => setCurrent(index + 1)}>

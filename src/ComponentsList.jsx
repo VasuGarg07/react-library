@@ -8,8 +8,10 @@ import LocalStorageHook from "./demos/LocalStorageHook";
 import DebounceHook from "./demos/DebounceHook";
 import ClickOutsideHook from "./demos/ClickOutsideHook";
 import VirtualListDemo from "./demos/VirtualListDemo";
+import DialogDemo from "./demos/DialogDemo";
 
 const APPS_LIST = [
+    { name: "Dialog Component", component: <DialogDemo /> },
     { name: "Virtualized List", component: <VirtualListDemo /> },
     { name: "Star Rating", component: <StarRating /> },
     { name: "Tabs", component: <Tabs /> },
