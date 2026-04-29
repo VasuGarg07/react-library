@@ -1,32 +1,19 @@
 import { act, useRef, useState } from 'react'
-import { useLocalStorage } from './hooks/useLocalStorage';
-import { useSessionStorage } from './hooks/useSessionStorage';
-import { useDebounce } from './hooks/useDebounce';
-import { useThrottle } from './hooks/useThrottle';
-import Modal from './Modal';
 import { useWindowSize } from './hooks/useWindowSize';
 import { useCopyToClipboard } from './hooks/useCopyToClipboard';
 import { useCopied } from './hooks/useCopied';
 import { useOnlineStatus } from './hooks/useOnlineStatus';
 import { useScrollPosition } from './hooks/useScrollPosition';
-import StarRating from './components/StarRating';
-import Tabs from './components/Tabs';
-import Typeahead from './components/Typeahead';
 import { useToast } from './components/useToast';
 import ProgressBar from './components/ProgressBar';
-import Accordion from './components/Accordion';
 import "./App.css"
 import APPS_LIST from './ComponentsList';
+import { useLocalStorage } from './hooks/useLocalStorage';
 
 function App() {
   const [activeIndex, setActiveIndex] = useLocalStorage("activeIndex",0);
   const component = APPS_LIST[activeIndex];
-
   
-  const [text2, setText2] = useState("");
-  const throttledFn = useThrottle(val => setText2(val), 500);
-  const [open, setOpen] = useState(false);
-
   // const {copyToClipboard} = useCopyToClipboard();
   const [copied, copyToClipboard] = useCopied();
   const online = useOnlineStatus();
@@ -118,15 +105,6 @@ function App() {
           </button>
           {ToastComponent}
 
-          <h5>14. Typeahead search</h5>
-          <Typeahead />
-
-          <h5>13. Tabs</h5>
-          <Tabs />
-
-          <h5>12. Star Rating</h5>
-          <StarRating initial={5} total={10} />
-
           <h5>11. useScrollPosition hook</h5>
           <p>Scroll Position - {scrollPositon}</p>
 
@@ -139,19 +117,7 @@ function App() {
 
           <h5>8. useWindowSize hook</h5>
           <p>Window Width: {width} & window height: {height}</p>
-
-          <h5>7. useClickOutside hook</h5>
-          <button onClick={() => handleModalOpen(true)}>Open Modal</button>
-          {open && <Modal onClose={() => handleModalOpen(false)} />}
-
-          <h5>6. useThrottle hook</h5>
-          <input type='text' onChange={(e) => throttledFn(e.target.value)} />
-
-          <h5>5. useSessionStorage hook</h5>
-          <p>Current Value: {sessionValue}</p>
-          <button onClick={() => setSessionValue((prev) => prev + 1)}>Update</button>
-
-          <h3>Throttled Input - {text2}</h3>*/}
+*/}
         </div>
       </div>
     </div>
