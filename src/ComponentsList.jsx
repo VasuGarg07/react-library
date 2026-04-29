@@ -7,8 +7,10 @@ import ToggleHook from "./demos/ToggleHook";
 import LocalStorageHook from "./demos/LocalStorageHook";
 import DebounceHook from "./demos/DebounceHook";
 import ClickOutsideHook from "./demos/ClickOutsideHook";
+import VirtualListDemo from "./demos/VirtualListDemo";
 
 const APPS_LIST = [
+    { name: "Virtualized List", component: <VirtualListDemo /> },
     { name: "Star Rating", component: <StarRating /> },
     { name: "Tabs", component: <Tabs /> },
     { name: "Typeahead Search", component: <Typeahead /> },
