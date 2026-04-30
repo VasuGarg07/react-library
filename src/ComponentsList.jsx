@@ -13,8 +13,10 @@ import CarouselDemo from "./demos/CarouselDemo";
 import TreeView from "./demos/TreeView";
 import OnLineHook from "./demos/OnLineHook";
 import ProgressBarDemo from "./demos/ProgressBarDemo";
+import PaginationDemo from "./demos/PaginationDemo";
 
 const APPS_LIST = [
+    { name: "Pagination", component: <PaginationDemo /> },
     { name: "Progress Bar", component: <ProgressBarDemo /> },
     { name: "Tree View", component: <TreeView /> },
     { name: "Carousel", component: <CarouselDemo /> },

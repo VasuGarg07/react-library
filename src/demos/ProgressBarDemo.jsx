@@ -2,19 +2,19 @@ import { useState } from "react";
 import ProgressBar from "../components/ProgressBar"
 
 const ProgressBarDemo = () => {
-    const [progress, setProgress] = useState(0);
+    const [progress, setProgress] = useState(50);
 
     const handleProgress = (value) => {
         let val = parseInt(value);
         if (isNaN(val)) {
-            setProgress(0);
+            setProgress(1);
             return;
         }
 
         if (val > 100) {
             setProgress(100);
         } else if (val < 0) {
-            setProgress(0);
+            setProgress(1);
         } else {
             setProgress(val)
         }

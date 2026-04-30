@@ -43,7 +43,7 @@ function App() {
                   color: index === activeIndex ? "#ffffff" : "#1d1d1f",
                   borderColor: index === activeIndex ? "#0071e3" : "#d2d2d7"
                 }}>
-                {app.name}
+                {(index + 1) + ". " + app.name}
               </li>
             ))}
           </ul>
