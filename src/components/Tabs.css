@@ -1,0 +1,37 @@
+.tabs-container {
+    background-color: white;
+    border-radius: 8px;
+    margin: 8px;
+    border: 1px solid var(--border-color);
+    width: 400px;
+}
+
+.tabs-list {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.tab {
+    padding: 4px;
+    border: none;
+    flex: 1 1 auto;
+    border-radius: 0;
+    border-bottom: 4px solid transparent;
+}
+
+.tab:first-child {
+    border-radius: 8px 0 0 0;
+}
+
+.tab:last-child {
+    border-radius: 0 8px 0 0;
+}
+
+.tab.active {
+    border-bottom: 4px solid var(--primary-color);
+}
+
+.panel-container {
+    padding: 8px;
+}

@@ -1,4 +1,5 @@
-import React, { act, useState } from 'react'
+import React, { act, useState } from 'react';
+import "./Tabs.css"
 
 const tabsData = [
   {
@@ -22,28 +23,27 @@ const Tabs = ({data = tabsData}) => {
   const [active, setActive] = useState(data[0].id);
 
   return (
-    <>
-      <div style={{
-        display:"flex",
-        alignItems:"center",
-        gap:"8px"
-      }}>
+    <div className='tabs-container'>
+      <div className='tabs-list'>
         {data.map(item => (
-          <button key={item.id}
+          <button 
+            key={item.id}
             onClick={() => setActive(item.id)}
-            style={{backgroundClip: active === item.id ? "#4d95cf": "#fff"}}>
+            className={`tab ${active === item.id ? "active" : ""}`}>
               {item.label}
           </button>
         ))}
       </div>
 
-      {data.map(item => (
+      <div className='panel-container'>
+        {data.map(item => (
           <p key={item.id}
             style={{display: active === item.id ? "block": "none"}}>
               {item.content}
           </p>
         ))}
-    </>
+      </div>
+    </div>
   )
 }
 
