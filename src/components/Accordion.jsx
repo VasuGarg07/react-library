@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from 'react'
+import "./Accordion.css";
 
 const tabsData = [
   {
@@ -22,24 +23,15 @@ const Accordion = ({ data = tabsData }) => {
   const [active, setActive] = useState(data[0].id);
 
   return (
-    <div style={{
-      display: "flex",
-      justifyContent: "center",
-      gap: "8px",
-      flexDirection: "column",
-      padding: "4px",
-      borderRadius: "4px",
-      border: "2px solid #585858"
-    }}>
+    <div className='accordion-container'>
       {data.map(item => (
         <Fragment key={item.id}>
           <button
             onClick={() => setActive(item.id)}
-            style={{ backgroundClip: active === item.id ? "#4d95cf" : "#fff" }}>
+            className={`accordion-tab`}>
             {item.label}
           </button>
-          <p
-            style={{ display: active === item.id ? "block" : "none" }}>
+          <p className={`accordion-content ${active === item.id ? "show": "hide"}`}>
             {item.content}
           </p>
         </Fragment>

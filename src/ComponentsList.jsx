@@ -9,8 +9,10 @@ import ClickOutsideHook from "./demos/ClickOutsideHook";
 import VirtualListDemo from "./demos/VirtualListDemo";
 import DialogDemo from "./demos/DialogDemo";
 import RatingDemo from "./demos/RatingDemo";
+import CarouselDemo from "./demos/CarouselDemo";
 
 const APPS_LIST = [
+    { name: "Carousel", component: <CarouselDemo /> },
     { name: "Star Rating", component: <RatingDemo /> },
     { name: "Dialog Component", component: <DialogDemo /> },
     { name: "Virtualized List", component: <VirtualListDemo /> },
