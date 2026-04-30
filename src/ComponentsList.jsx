@@ -11,6 +11,7 @@ import DialogDemo from "./demos/DialogDemo";
 import RatingDemo from "./demos/RatingDemo";
 import CarouselDemo from "./demos/CarouselDemo";
 import TreeView from "./demos/TreeView";
+import OnLineHook from "./demos/OnLineHook";
 
 const APPS_LIST = [
     { name: "Tree View", component: <TreeView /> },
@@ -21,6 +22,7 @@ const APPS_LIST = [
     { name: "Tabs", component: <Tabs /> },
     { name: "Typeahead Search", component: <Typeahead /> },
     { name: "Accordion", component: <Accordion /> },
+    { name: "useOnlineStatus Hook", component: <OnLineHook /> },
     { name: "useClickOutside Hook", component: <ClickOutsideHook /> },
     { name: "useDebounce Hook", component: <DebounceHook /> },
     { name: "useLocalStorage Hook", component: <LocalStorageHook /> },
