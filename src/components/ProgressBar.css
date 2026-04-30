@@ -1,0 +1,11 @@
+.progress-container {
+    padding: 2px;
+    border-radius: 4px;
+    border: 2px solid var(--primary-color);
+}
+
+.progress {
+    padding: 2px;
+    border-radius: 4px;
+    background-color: var(--primary-color);
+}

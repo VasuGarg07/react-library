@@ -1,19 +1,10 @@
-import React from 'react'
+import "./ProgressBar.css";
 
-const ProgressBar = ({ value }) => {
+const ProgressBar = ({ value, length = 400 }) => {
+
     return (
-        <div style={{
-            width: 400,
-            padding: 2,
-            border: "2px solid #393939",
-            borderRadius: 8
-        }}>
-            <div style={{
-                width: (400 * (value / 100) - 4),
-                backgroundColor: "#393939",
-                padding: 2,
-                borderRadius: 4
-            }} />
+        <div className="progress-container" style={{ width: length }}>
+            <div className="progress" style={{ width: (length * (value / 100) - 4) }} />
         </div>
     )
 }
