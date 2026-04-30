@@ -10,8 +10,10 @@ import VirtualListDemo from "./demos/VirtualListDemo";
 import DialogDemo from "./demos/DialogDemo";
 import RatingDemo from "./demos/RatingDemo";
 import CarouselDemo from "./demos/CarouselDemo";
+import TreeView from "./demos/TreeView";
 
 const APPS_LIST = [
+    { name: "Tree View", component: <TreeView /> },
     { name: "Carousel", component: <CarouselDemo /> },
     { name: "Star Rating", component: <RatingDemo /> },
     { name: "Dialog Component", component: <DialogDemo /> },

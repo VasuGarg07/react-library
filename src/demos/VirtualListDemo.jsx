@@ -7,7 +7,7 @@ const VirtualListDemo = () => {
         <Virtualized
             list={longList}
             width={320}
-            height={480}
+            height={320}
             itemHeight={24} />
     )
 }

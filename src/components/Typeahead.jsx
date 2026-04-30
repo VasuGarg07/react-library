@@ -28,7 +28,7 @@ const Typeahead = ({ list = itemList }) => {
                     setIsOpen(true);
                 }}
                 onFocus={() => setIsOpen(true)}
-                onBlur={() => setTimeout(() => setIsOpen(false), 150)}
+                onBlur={() => setIsOpen(false)}
             />
 
             {isOpen && filtered.length > 0 && (
@@ -36,7 +36,7 @@ const Typeahead = ({ list = itemList }) => {
                     {filtered.map((str) => (
                         <li
                             key={str}
-                            onClick={() => handleSelect(str)}
+                            onMouseDown={() => handleSelect(str)}
                             style={{
                                 padding: "8px",
                                 cursor: "pointer"

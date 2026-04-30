@@ -15,6 +15,7 @@ const Carousel = ({ imageList }) => {
             </button>
             <img
                 className='carousel-img'
+                loading='lazy'
                 src={imageList[index]}
                 alt={`Carousel Image ${index + 1}`}
             />
