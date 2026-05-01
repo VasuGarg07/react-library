@@ -14,8 +14,16 @@ import TreeView from "./demos/TreeView";
 import OnLineHook from "./demos/OnLineHook";
 import ProgressBarDemo from "./demos/ProgressBarDemo";
 import PaginationDemo from "./demos/PaginationDemo";
+import CommentsProvider from "./components/CommentsContext";
+import CommentsDemo from "./demos/CommentsDemo";
 
 const APPS_LIST = [
+    {
+        name: "Nested Comments", 
+        component: <CommentsProvider>
+            <CommentsDemo />
+        </CommentsProvider>
+    },
     { name: "Pagination", component: <PaginationDemo /> },
     { name: "Progress Bar", component: <ProgressBarDemo /> },
     { name: "Tree View", component: <TreeView /> },
