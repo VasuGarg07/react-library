@@ -1,0 +1,19 @@
+.typeahead-container {
+    position: relative;
+    width: 300px;
+}
+
+.typeahead-options-list {
+    position: absolute;
+    width: 100%;
+    border: 1px solid var(--border-color);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+}
+
+.typeahead-options-list li {
+    padding: 8px;
+    cursor: pointer;
+}

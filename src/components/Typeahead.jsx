@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import "./Typeahead.css"
 
 const itemList = [
     "html", "css", "javascript",
@@ -19,7 +20,7 @@ const Typeahead = ({ list = itemList }) => {
 
 
     return (
-        <div style={{ position: "relative", width: "300px" }}>
+        <div className='typeahead-container'>
             <input
                 placeholder='enter query'
                 value={query}
@@ -32,15 +33,11 @@ const Typeahead = ({ list = itemList }) => {
             />
 
             {isOpen && filtered.length > 0 && (
-                <ul style={{ position: "absolute", width: "100%", border: "1px solid #ccc", listStyle: "none", padding: 0, margin: 0, backgroundColor: "white" }}>
+                <ul className='typeahead-options-list'>
                     {filtered.map((str) => (
                         <li
                             key={str}
                             onMouseDown={() => handleSelect(str)}
-                            style={{
-                                padding: "8px",
-                                cursor: "pointer"
-                            }}
                         >
                             {str}
                         </li>
