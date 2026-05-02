@@ -15,8 +15,10 @@ import OnLineHook from "./demos/OnLineHook";
 import ProgressBarDemo from "./demos/ProgressBarDemo";
 import PaginationDemo from "./demos/PaginationDemo";
 import CommentsDemo from "./demos/CommentsDemo";
+import StepperDemo from "./demos/StepperDemo";
 
 const APPS_LIST = [
+    { name: "Stepper", component: <StepperDemo /> },
     { name: "Nested Comments", component: <CommentsDemo /> },
     { name: "Pagination", component: <PaginationDemo /> },
     { name: "Progress Bar", component: <ProgressBarDemo /> },
