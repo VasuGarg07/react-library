@@ -17,9 +17,11 @@ import PaginationDemo from "./demos/PaginationDemo";
 import CommentsDemo from "./demos/CommentsDemo";
 import StepperDemo from "./demos/StepperDemo";
 import ChipsInput from "./components/ChipsInput";
+import OtpInput from "./components/OtpInput";
 
 const APPS_LIST = [
-    { name: "ChipsInput", component: <ChipsInput /> },
+    { name: "OTP Input", component: <OtpInput /> },
+    { name: "Chips Input", component: <ChipsInput /> },
     { name: "Stepper", component: <StepperDemo /> },
     { name: "Nested Comments", component: <CommentsDemo /> },
     { name: "Pagination", component: <PaginationDemo /> },
