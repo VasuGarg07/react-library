@@ -14,10 +14,11 @@ const Stepper = ({ steps }) => {
             <div className="steps-container">
                 {steps.map((step, index) => (
                     <Fragment key={index}>
-                        {index > 0 && <div className="step-line spacer"
-                            style={{
-                                backgroundColor: index <= activeIndex ? "#0071e3" : "#808080"
-                            }} />}
+                        {index > 0 && (
+                            <div className="step-line spacer"
+                                style={{ backgroundColor: index <= activeIndex ? "#0071e3" : "#808080" }}
+                            />
+                        )}
                         <div className="step-item">
                             <span className="step-index" style={{
                                 backgroundColor: index <= activeIndex ? "#0071e3" : "#808080",

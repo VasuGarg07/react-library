@@ -18,8 +18,13 @@ import CommentsDemo from "./demos/CommentsDemo";
 import StepperDemo from "./demos/StepperDemo";
 import ChipsInput from "./components/ChipsInput";
 import OtpInput from "./components/OtpInput";
+import ToastDemo from "./demos/ToastDemo";
+import ToastProvider from "./components/ToastsProvider";
 
 const APPS_LIST = [
+    { name: "Toasts", component: <ToastProvider>
+        <ToastDemo />
+    </ToastProvider> },
     { name: "OTP Input", component: <OtpInput /> },
     { name: "Chips Input", component: <ChipsInput /> },
     { name: "Stepper", component: <StepperDemo /> },

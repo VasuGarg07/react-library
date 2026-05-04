@@ -1,35 +1,26 @@
-import React, { useImperativeHandle, useRef } from 'react';
+import { useEffect } from "react";
+import "./Toast.css";
 
-const styles = {
-  success: {icon: "✅", bgColor: "#00a800"},
-  info: {icon: "ℹ️", bgColor: "#0068a9"},
-  error: {icon: "❌", bgColor: "#c30505"},
-  warning: {icon: "⚠️", bgColor: "#e6d600"},
+const icons = {
+  success: "✔",
+  info: "🛈",
+  error: "x",
+  warning: "⚠",
 }
 
-const Toast = ({ type = "info", message, onClose = () => { } }) => {
-  const style = styles[type];
+const Toast = ({ id, type, message, onClose, duration }) => {
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => onClose(id), duration);
+    return () => clearTimeout(timeoutId);
+  }, []);
 
   return (
-    <div style={{
-      padding: "0 8px",
-      borderRadius: "8px",
-      display: "flex",
-      alignItems: "center",
-      gap: "8px",
-      backgroundColor: style.bgColor,
-      color: "#fff"
-    }}>
-      <p>{style.icon}</p>
+    <div className={`toast toast-${type}`}>
+      <p>{icons[type]}</p>
       <p>{message}</p>
-      <span style={{flexGrow:1}} />
-      <button style={{
-        border:"none",
-        outline:"none",
-        width:"fit-content",
-        color:"white",
-        backgroundColor:"transparent"
-      }} onClick={onClose}>
+      <span style={{ flexGrow: 1 }} />
+      <button className="toast-close-icon" onClick={() => onClose(id)}>
         X
       </button>
     </div>
