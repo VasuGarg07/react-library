@@ -7,9 +7,18 @@ const TreeNode = ({ node, level }) => {
 
     const getIcon = () => {
         if (!isFolder) return "📄";
-
         return isExpanded ? "📂" : "📁"
     }
+
+    if (node.children) {
+        node.children.sort((a, b) => {
+            if(!a.children && b.children) return 1;
+            if (a.children && !b.children) return -1;
+
+            return a.key.localeCompare(b.key)
+        })
+    }
+
     return (
         <>
             <div

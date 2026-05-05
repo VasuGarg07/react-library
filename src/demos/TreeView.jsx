@@ -6,13 +6,7 @@ const treeStructure = [
     key: "src",
     name: "src",
     children: [
-      {
-        key: "components", name: "Components", children: [
-          { key: "accordion", name: "Accordion.jsx" },
-          { key: "carousel", name: "Carousel.jsx" },
-          { key: "dialog", name: "Dialog.jsx" },
-        ]
-      },
+      { key: "main", name: "Main.jsx" },
       {
         key: "hooks", name: "Hooks", children: [
           { key: "useDebounce", name: "useDebounce.js" },
@@ -22,13 +16,19 @@ const treeStructure = [
         ]
       },
       {
+        key: "components", name: "Components", children: [
+          { key: "accordion", name: "Accordion.jsx" },
+          { key: "carousel", name: "Carousel.jsx" },
+          { key: "dialog", name: "Dialog.jsx" },
+        ]
+      },
+      {
         key: "pages", name: "Pages", children: [
           { key: "virtual-list", name: "VirtualList.jsx" },
           { key: "star-rating", name: "StarRating.jsx" },
         ]
       },
       { key: "app", name: "App.jsx" },
-      { key: "main", name: "Main.jsx" },
       { key: "index", name: "index.css" },
     ]
   }
