@@ -20,8 +20,10 @@ import ChipsInput from "./components/ChipsInput";
 import OtpInput from "./components/OtpInput";
 import ToastDemo from "./demos/ToastDemo";
 import ToastProvider from "./components/ToastsProvider";
+import TrafficLight from "./demos/TrafficLight";
 
 const APPS_LIST = [
+    { name: "Traffic Lights", component: <TrafficLight /> },
     { name: "Toasts", component: <ToastProvider>
         <ToastDemo />
     </ToastProvider> },
