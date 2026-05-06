@@ -21,8 +21,10 @@ import OtpInput from "./components/OtpInput";
 import ToastDemo from "./demos/ToastDemo";
 import ToastProvider from "./components/ToastsProvider";
 import TrafficLight from "./demos/TrafficLight";
+import Stopwatch from "./components/Stopwatch";
 
 const APPS_LIST = [
+    { name: "Stopwatch", component: <Stopwatch /> },
     { name: "Traffic Lights", component: <TrafficLight /> },
     { name: "Toasts", component: <ToastProvider>
         <ToastDemo />
