@@ -1,0 +1,35 @@
+.ref-container {
+    position: relative;
+}
+.menu-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: rgb(12, 14, 35);
+    color: white;
+    width: 100%;
+    gap: 0.5rem;
+}
+
+.menu-container a {
+    color: white;
+}
+
+.spacer {
+    flex-grow: 1;
+}
+
+.menu-options {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.menu-options a {
+    padding: 0.5rem 1rem;
+    background-color: rgb(12, 14, 35);
+    color: white;
+    width: 100%;
+    text-align: center;
+}

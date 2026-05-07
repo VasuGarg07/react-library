@@ -22,8 +22,10 @@ import ToastDemo from "./demos/ToastDemo";
 import ToastProvider from "./components/ToastsProvider";
 import TrafficLight from "./demos/TrafficLight";
 import Stopwatch from "./components/Stopwatch";
+import MenuBar from "./components/MenuBar";
 
 const APPS_LIST = [
+    { name: "Menu Bar", component: <MenuBar /> },
     { name: "Stopwatch", component: <Stopwatch /> },
     { name: "Traffic Lights", component: <TrafficLight /> },
     { name: "Toasts", component: <ToastProvider>
