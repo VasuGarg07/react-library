@@ -23,8 +23,12 @@ import ToastProvider from "./components/ToastsProvider";
 import TrafficLight from "./demos/TrafficLight";
 import Stopwatch from "./components/Stopwatch";
 import MenuBar from "./components/MenuBar";
+import TodoMain from "./apps/Todo/TodoMain";
 
 const APPS_LIST = [
+    // Apps
+    { name: "Todo", component: <TodoMain />},
+    // Components
     { name: "Menu Bar", component: <MenuBar /> },
     { name: "Stopwatch", component: <Stopwatch /> },
     { name: "Traffic Lights", component: <TrafficLight /> },
@@ -45,6 +49,7 @@ const APPS_LIST = [
     { name: "Tabs", component: <Tabs /> },
     { name: "Typeahead Search", component: <Typeahead /> },
     { name: "Accordion", component: <Accordion /> },
+    // Hooks
     { name: "useOnlineStatus Hook", component: <OnLineHook /> },
     { name: "useClickOutside Hook", component: <ClickOutsideHook /> },
     { name: "useDebounce Hook", component: <DebounceHook /> },
