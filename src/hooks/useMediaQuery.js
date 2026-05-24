@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react"
 
 export const useMediaQuery = (query) => {
-    const [matches, setMatches] = useState(false);
+    const [matches, setMatches] = useState(() => window.matchMedia(query).matches);
 
     useEffect(() => {
-        const handleChange = () => setMatches(window.matchMedia(query).matches);
-        window.addEventListener('resize', handleChange);
-        return () => window.removeEventListener('resize', handleChange);
+        const mql = window.matchMedia(query);
+        const handleChange = (e) => setMatches(e.matches);
+
+        setMatches(mql.matches);
+        mql.addEventListener('change', handleChange);
+        return () => mql.removeEventListener('change', handleChange);
     }, [query]);
 
-    return matches
+    return matches;
 }
