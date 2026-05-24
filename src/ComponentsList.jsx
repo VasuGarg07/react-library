@@ -1,9 +1,6 @@
 import { lazy } from 'react';
 
-// ─── Apps ──────────────────────────────────────────────────────────────────
 const TodoMain = lazy(() => import('./apps/Todo/TodoMain'));
-
-// ─── Components ────────────────────────────────────────────────────────────
 const Accordion = lazy(() => import('./components/Accordion'));
 const CarouselDemo = lazy(() => import('./demos/CarouselDemo'));
 const ChipsInput = lazy(() => import('./components/ChipsInput'));
@@ -22,8 +19,6 @@ const TrafficLight = lazy(() => import('./demos/TrafficLight'));
 const TreeView = lazy(() => import('./demos/TreeView'));
 const Typeahead = lazy(() => import('./components/Typeahead'));
 const VirtualListDemo = lazy(() => import('./demos/VirtualListDemo'));
-
-// ─── Hooks ─────────────────────────────────────────────────────────────────
 const ClickOutsideHook = lazy(() => import('./demos/ClickOutsideHook'));
 const CopyToClipboardHook = lazy(() => import('./demos/CopyToClipboardHook'));
 const DebounceHook = lazy(() => import('./demos/DebounceHook'));
