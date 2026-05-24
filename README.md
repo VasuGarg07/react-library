@@ -2,7 +2,7 @@
 
 A personal practice repo where I rebuild common React components and hooks from scratch to better understand how they work under the hood.
 
-🔗 [Live demo](https://react-library-eta.vercel.app)
+🔗 [Live demo](https://react-library-eta.vercel.app) &nbsp;|&nbsp; [GitHub](https://github.com/VasuGarg07/react-library)
 
 ## Progress
 
@@ -11,12 +11,14 @@ A personal practice repo where I rebuild common React components and hooks from 
 - [x] Carousel
 - [x] Chips Input
 - [x] Dialog
+- [x] Menu Bar
 - [x] Nested Comments
 - [x] OTP Input
 - [x] Pagination
 - [x] Progress Bar
 - [x] Star Rating
 - [x] Stepper
+- [x] Stopwatch
 - [x] Tabs
 - [x] Toasts
 - [x] Traffic Lights
@@ -26,26 +28,30 @@ A personal practice repo where I rebuild common React components and hooks from 
 
 **Hooks**
 - [x] useClickOutside
+- [x] useCopyToClipboard
 - [x] useDebounce
+- [x] useFetch
+- [x] useInfiniteScroll
 - [x] useLocalStorage
+- [x] useMediaQuery
 - [x] useOnlineStatus
+- [x] usePrevious
 - [x] useTheme
 - [x] useToggle
-- [x] useFetch
-- [x] usePrevious
+- [x] useWindowSize
+
+**Apps**
+- [x] Todo App
 
 **Up next**
-- [ ] Infinite Scroll List
 - [ ] Drag and Drop Kanban
-- [ ] Stopwatch
 - [ ] Form Validation
 - [ ] Image Gallery / Lightbox
 - [ ] useIntersectionObserver
-- [ ] useMediaQuery
 
 ## Stack
 
-React, Vite, plain CSS. No UI libraries.
+React 19, Vite, plain CSS. No UI libraries.
 
 ## Running locally
 

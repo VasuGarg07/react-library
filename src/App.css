@@ -1,58 +1,136 @@
-/* App Container */
 .App {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .App .header {
-    padding: 16px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 56px;
+    flex-shrink: 0;
     border-bottom: 1px solid var(--border-color);
 }
 
 .App .header .title {
-    margin-bottom: 0;
-    font-size: 24px;
+    margin: 0;
+    font-size: 20px;
+}
+
+.github-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.github-link:hover {
+    background: var(--bg-color);
+    color: var(--text-color);
 }
 
 .App-container {
     display: flex;
-    align-self: center;
-    width: 100%;
-    height: calc(100vh - 64px);
+    flex: 1;
+    min-height: 0;
 }
 
 .App-container-list {
-    display: flex;
-    align-self: center;
-    flex-direction: column;
-    padding: 12px;
-    width: 320px;
+    width: 260px;
+    flex-shrink: 0;
     height: 100%;
-    overflow: auto;
+    overflow-y: auto;
     border-right: 1px solid var(--border-color);
+    padding: 8px 10px 16px;
+}
+
+.sidebar-group {
+    margin-bottom: 4px;
+}
+
+.sidebar-category-label {
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 6px 4px;
+    margin-top: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    border-radius: 6px;
+}
+
+.sidebar-category-label:hover {
+    background: var(--bg-color);
+}
+
+.chevron {
+    font-size: 14px;
+    display: inline-block;
+    transition: transform 0.15s;
+    transform: rotate(0deg);
+}
+
+.chevron.open {
+    transform: rotate(90deg);
+}
+
+.sidebar-count {
+    margin-left: auto;
+    font-size: 10px;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 1px 6px;
+    letter-spacing: 0;
 }
 
 .App-container-list ul {
     list-style: none;
-    margin: 0;
+    margin: 2px 0 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
 }
 
 .App-container-list li {
-    padding: 4px 12px;
-    background: white;
-    font-size: 14px;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
+    padding: 6px 10px;
+    font-size: 13px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    color: var(--text-color);
 }
 
-.App-container-list li:hover{
-    cursor: pointer;
+.App-container-list li:hover {
+    background: var(--bg-color);
+    border-color: var(--border-color);
+}
+
+.App-container-list li.active {
+    background: #e8f0fd;
+    border-color: #b6ccf7;
+    color: #1a56db;
+    font-weight: 500;
 }
 
 .App-container-content {
-    padding: 12px;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
+    flex: 1;
+    min-width: 0;
+    padding: 20px 24px;
+    overflow-y: auto;
 }

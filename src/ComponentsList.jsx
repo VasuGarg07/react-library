@@ -1,61 +1,81 @@
-import Accordion from "./components/Accordion";
-import Tabs from "./components/Tabs";
-import Typeahead from "./components/Typeahead";
-import ThemeHook from "./demos/ThemeHook";
-import ToggleHook from "./demos/ToggleHook";
-import LocalStorageHook from "./demos/LocalStorageHook";
-import DebounceHook from "./demos/DebounceHook";
-import ClickOutsideHook from "./demos/ClickOutsideHook";
-import VirtualListDemo from "./demos/VirtualListDemo";
-import DialogDemo from "./demos/DialogDemo";
-import RatingDemo from "./demos/RatingDemo";
-import CarouselDemo from "./demos/CarouselDemo";
-import TreeView from "./demos/TreeView";
-import OnLineHook from "./demos/OnLineHook";
-import ProgressBarDemo from "./demos/ProgressBarDemo";
-import PaginationDemo from "./demos/PaginationDemo";
-import CommentsDemo from "./demos/CommentsDemo";
-import StepperDemo from "./demos/StepperDemo";
-import ChipsInput from "./components/ChipsInput";
-import OtpInput from "./components/OtpInput";
-import ToastDemo from "./demos/ToastDemo";
-import ToastProvider from "./components/ToastsProvider";
-import TrafficLight from "./demos/TrafficLight";
-import Stopwatch from "./components/Stopwatch";
-import MenuBar from "./components/MenuBar";
-import TodoMain from "./apps/Todo/TodoMain";
+import { lazy } from 'react';
+
+// ─── Apps ──────────────────────────────────────────────────────────────────
+const TodoMain = lazy(() => import('./apps/Todo/TodoMain'));
+
+// ─── Components ────────────────────────────────────────────────────────────
+const Accordion = lazy(() => import('./components/Accordion'));
+const CarouselDemo = lazy(() => import('./demos/CarouselDemo'));
+const ChipsInput = lazy(() => import('./components/ChipsInput'));
+const CommentsDemo = lazy(() => import('./demos/CommentsDemo'));
+const DialogDemo = lazy(() => import('./demos/DialogDemo'));
+const MenuBar = lazy(() => import('./components/MenuBar'));
+const OtpInput = lazy(() => import('./components/OtpInput'));
+const PaginationDemo = lazy(() => import('./demos/PaginationDemo'));
+const ProgressBarDemo = lazy(() => import('./demos/ProgressBarDemo'));
+const RatingDemo = lazy(() => import('./demos/RatingDemo'));
+const StepperDemo = lazy(() => import('./demos/StepperDemo'));
+const Stopwatch = lazy(() => import('./components/Stopwatch'));
+const Tabs = lazy(() => import('./components/Tabs'));
+const ToastDemoWithProvider = lazy(() => import('./demos/ToastDemoWithProvider'));
+const TrafficLight = lazy(() => import('./demos/TrafficLight'));
+const TreeView = lazy(() => import('./demos/TreeView'));
+const Typeahead = lazy(() => import('./components/Typeahead'));
+const VirtualListDemo = lazy(() => import('./demos/VirtualListDemo'));
+
+// ─── Hooks ─────────────────────────────────────────────────────────────────
+const ClickOutsideHook = lazy(() => import('./demos/ClickOutsideHook'));
+const CopyToClipboardHook = lazy(() => import('./demos/CopyToClipboardHook'));
+const DebounceHook = lazy(() => import('./demos/DebounceHook'));
+const FetchHook = lazy(() => import('./demos/FetchHook'));
+const InfiniteScrollDemo = lazy(() => import('./demos/InfiniteScrollDemo'));
+const LocalStorageHook = lazy(() => import('./demos/LocalStorageHook'));
+const MediaQueryHook = lazy(() => import('./demos/MediaQueryHook'));
+const OnLineHook = lazy(() => import('./demos/OnLineHook'));
+const PreviousHook = lazy(() => import('./demos/PreviousHook'));
+const ThemeHook = lazy(() => import('./demos/ThemeHook'));
+const ToggleHook = lazy(() => import('./demos/ToggleHook'));
+const WindowSizeHook = lazy(() => import('./demos/WindowSizeHook'));
+
 
 const APPS_LIST = [
     // Apps
-    { name: "Todo", component: <TodoMain />},
+    { name: 'Todo App', category: 'Apps', component: TodoMain },
+
     // Components
-    { name: "Menu Bar", component: <MenuBar /> },
-    { name: "Stopwatch", component: <Stopwatch /> },
-    { name: "Traffic Lights", component: <TrafficLight /> },
-    { name: "Toasts", component: <ToastProvider>
-        <ToastDemo />
-    </ToastProvider> },
-    { name: "OTP Input", component: <OtpInput /> },
-    { name: "Chips Input", component: <ChipsInput /> },
-    { name: "Stepper", component: <StepperDemo /> },
-    { name: "Nested Comments", component: <CommentsDemo /> },
-    { name: "Pagination", component: <PaginationDemo /> },
-    { name: "Progress Bar", component: <ProgressBarDemo /> },
-    { name: "Tree View", component: <TreeView /> },
-    { name: "Carousel", component: <CarouselDemo /> },
-    { name: "Star Rating", component: <RatingDemo /> },
-    { name: "Dialog Component", component: <DialogDemo /> },
-    { name: "Virtualized List", component: <VirtualListDemo /> },
-    { name: "Tabs", component: <Tabs /> },
-    { name: "Typeahead Search", component: <Typeahead /> },
-    { name: "Accordion", component: <Accordion /> },
+    { name: 'Accordion', category: 'Components', component: Accordion },
+    { name: 'Carousel', category: 'Components', component: CarouselDemo },
+    { name: 'Chips Input', category: 'Components', component: ChipsInput },
+    { name: 'Dialog', category: 'Components', component: DialogDemo },
+    { name: 'Menu Bar', category: 'Components', component: MenuBar },
+    { name: 'Nested Comments', category: 'Components', component: CommentsDemo },
+    { name: 'OTP Input', category: 'Components', component: OtpInput },
+    { name: 'Pagination', category: 'Components', component: PaginationDemo },
+    { name: 'Progress Bar', category: 'Components', component: ProgressBarDemo },
+    { name: 'Star Rating', category: 'Components', component: RatingDemo },
+    { name: 'Stepper', category: 'Components', component: StepperDemo },
+    { name: 'Stopwatch', category: 'Components', component: Stopwatch },
+    { name: 'Tabs', category: 'Components', component: Tabs },
+    { name: 'Toasts', category: 'Components', component: ToastDemoWithProvider },
+    { name: 'Traffic Lights', category: 'Components', component: TrafficLight },
+    { name: 'Tree View', category: 'Components', component: TreeView },
+    { name: 'Typeahead Search', category: 'Components', component: Typeahead },
+    { name: 'Virtualized List', category: 'Components', component: VirtualListDemo },
+
     // Hooks
-    { name: "useOnlineStatus Hook", component: <OnLineHook /> },
-    { name: "useClickOutside Hook", component: <ClickOutsideHook /> },
-    { name: "useDebounce Hook", component: <DebounceHook /> },
-    { name: "useLocalStorage Hook", component: <LocalStorageHook /> },
-    { name: "useTheme Hook", component: <ThemeHook /> },
-    { name: "useToggle Hook", component: <ToggleHook /> },
+    { name: 'useClickOutside', category: 'Hooks', component: ClickOutsideHook },
+    { name: 'useCopyToClipboard', category: 'Hooks', component: CopyToClipboardHook },
+    { name: 'useDebounce', category: 'Hooks', component: DebounceHook },
+    { name: 'useFetch', category: 'Hooks', component: FetchHook },
+    { name: 'useInfiniteScroll', category: 'Hooks', component: InfiniteScrollDemo },
+    { name: 'useLocalStorage', category: 'Hooks', component: LocalStorageHook },
+    { name: 'useMediaQuery', category: 'Hooks', component: MediaQueryHook },
+    { name: 'useOnlineStatus', category: 'Hooks', component: OnLineHook },
+    { name: 'usePrevious', category: 'Hooks', component: PreviousHook },
+    { name: 'useTheme', category: 'Hooks', component: ThemeHook },
+    { name: 'useToggle', category: 'Hooks', component: ToggleHook },
+    { name: 'useWindowSize', category: 'Hooks', component: WindowSizeHook },
 ];
 
+export const CATEGORIES = ['Apps', 'Components', 'Hooks'];
 export default APPS_LIST;
